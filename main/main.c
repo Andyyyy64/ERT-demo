@@ -1,3 +1,4 @@
+#include "esp_log_level.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
@@ -20,9 +21,9 @@ const gpio_num_t electrodePins[NUM_ELECTRODES] = {
 
 void error_handler(esp_err_t err) {
     if (err == ESP_OK) {
-        ESP_LOGI("Data sent successfully");
+        ESP_LOGI("ERT", "Data sent successfully");
     } else {
-        ESP_LOGE("Failed to send data: %s", esp_err_to_name(err));
+        ESP_LOGE(err);
     }
 }
 
