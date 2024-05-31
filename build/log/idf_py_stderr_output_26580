@@ -1,0 +1,10 @@
+/home/andy/PROJECT/labo/ERT-DEMO/main/hello_world_main.c: In function 'led_blink':
+/home/andy/PROJECT/labo/ERT-DEMO/main/hello_world_main.c:16:5: error: implicit declaration of function 'esp_rom_gpio_set_direction'; did you mean 'gpio_set_direction'? [-Werror=implicit-function-declaration]
+   16 |     esp_rom_gpio_set_direction (LED_PIN,GPIO_MODE_OUTPUT);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     gpio_set_direction
+cc1: some warnings being treated as errors
+make[3]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:76: esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj] Error 1
+make[2]: *** [CMakeFiles/Makefile2:5542: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:2428: CMakeFiles/flash.dir/rule] Error 2
+make: *** [Makefile:312: flash] Error 2

@@ -1,0 +1,15 @@
+/home/andy/PROJECT/labo/ERT-DEMO/main/hello_world_main.c: In function 'led_blink':
+/home/andy/PROJECT/labo/ERT-DEMO/main/hello_world_main.c:15:5: error: implicit declaration of function 'gpio_pad_select_gpio'; did you mean 'esp_rom_gpio_pad_select_gpio'? [-Werror=implicit-function-declaration]
+   15 |     gpio_pad_select_gpio(LED_PIN);
+      |     ^~~~~~~~~~~~~~~~~~~~
+      |     esp_rom_gpio_pad_select_gpio
+/home/andy/PROJECT/labo/ERT-DEMO/main/hello_world_main.c:19:25: error: 'portTICK_RATE_MS' undeclared (first use in this function); did you mean 'portTICK_PERIOD_MS'?
+   19 |         vTaskDelay(1000/portTICK_RATE_MS);
+      |                         ^~~~~~~~~~~~~~~~
+      |                         portTICK_PERIOD_MS
+/home/andy/PROJECT/labo/ERT-DEMO/main/hello_world_main.c:19:25: note: each undeclared identifier is reported only once for each function it appears in
+cc1: some warnings being treated as errors
+make[3]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:76: esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj] Error 1
+make[2]: *** [CMakeFiles/Makefile2:5542: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:2428: CMakeFiles/flash.dir/rule] Error 2
+make: *** [Makefile:312: flash] Error 2
